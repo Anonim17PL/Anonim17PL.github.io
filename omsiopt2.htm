@@ -1,0 +1,173 @@
+<div id="pid_162207" class="post_body">
+				<span style="font-size: xx-small;">Jest to tłumaczenie <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=820867621" target="_blank" original-title="">tego poradnika</a> z angielskiego na polski.</span><br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Uwagi Autora:</span></span><br>
+<blockquote><cite>Oblong napisał(a):</cite>To jest przetłumaczona wersja tego przewodnika. Zrobiłem, co mogłem, z tłumaczeniem, ale możliwe są błędy w tłumaczeniu i błędy gramatyczne.</blockquote>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;"> Informacje ogólne</span></span><br>
+　W przeciwieństwie do większości innych gier, najnowsza i najpotężniejsza karta graficzna nie pomoże ci zbytnio w wydajności. OMSI potrzebuje szybkiego procesora, najlepiej dwurdzeniowego lub więcej, z co najmniej 3GHz (dla AMD, dla Intela może to być trochę mniej). Jeżeli chcesz poprawić wydajność, musisz poprawić wykorzystanie procesora. W Omsi procesor przygotowuje również prawie całą grafikę, dzięki czemu karta graficzna jest tylko do ostatecznego renderowania. Oznacza to, że ilość obiektów, a także ilość AI (samochody, autobusy i ludzie) należy ustawić zgodnie z mocą twojego procesora<br>
+<br>
+Jeżeli uzyskasz mniej niż 7-10 FPS (klatek na sekundę) , silnik fizyki zaczyna się psuć (glitch'ować – przyp. tłum.), a autobus zaczyna podskakiwać.<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;"> „Patch 4 GB”<br>
+</span></span>　Jeżeli szukasz pomocy dotyczącej problemów z wydajnością, możesz często przeczytać „użyj poprawki 4 GB”, ale z jakiego powodu? OMSI, jako aplikacja 32-bitowa, nie może używać więcej niż 4 GB pamięci RAM. 2 z 4 GB są zarezerwowane dla systemu, więc OMSI zwykle może używać tylko 2 GB pamięci RAM, ale w exe można ustawić oznaczenie, które zezwala aplikacji 32-bitowej na wykorzystanie całego 4 GB.<br>
+<br>
+Pomaga to w OMSI z bardzo dużymi mapami, które wymagają dużo pamięci RAM. Ta poprawka technicznie pomaga tylko wtedy, gdy masz problemy z białymi teksturami.<br>
+<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Zaawansowane ustawienia </span></span><br>
+<img src="https://strefa-omsi.pl/attachment.php?aid=2982" border="0" alt="[Obrazek: attachment.php?aid=2982]" original-title=""><br>
+<br>
+Najważniejsze rzeczy:<br>
+<ul>
+<li><span style="font-weight: bold;">Autozapis</span><br>
+</li></ul>
+　Za każdym razem kiedy zatrzymuje się autobus, OMSI zapisuje bieżącą sytuację. Może to spowodować krótkie zawieszenie, zwłaszcza gdy wydajność jest już niska. Jeżeli cię to denerwuje, a OMSI działa dość stabilnie, możesz to tutaj dezaktywować, ale pamiętaj, że musisz ręcznie zapisać sytuację, gdy zamykasz OMSI, w przeciwnym razie nie będziesz mógł kontynuować w tym momencie i możliwe będzie rozpoczęcie tylko nowych sytuacji.<br>
+<ul>
+<li><span style="font-weight: bold;">Zmniejszona wielowątkowość</span><br>
+</li></ul>
+　Ta opcja jest mniej więcej pozostałością po wczesnej erze Omsi 2, kiedy nowa wielowątkowość (oznacza użycie wielu rdzeni procesora) spowodowała pewne problemy. Dość mocno obniża wydajność; jeżeli nie masz problemów, wyłącz tę opcję.<br>
+<ul>
+<li><span style="font-weight: bold;">Wczytaj całą mapę na starcie</span><br>
+</li></ul>
+　Użyj tego tylko wtedy, gdy twój komputer ma problemy z ładowaniem nowych kafelków. Dzięki tej opcji czas wczytywania nowych kafelków jest krótszy, ale ogólna wydajność może również nieco spaść, a duże mapy wymagają bardzo dużo czasu na załadowanie. Bardzo duże mapy mogą się nie załadować z powodu 32-bitowego ograniczenia użycia pamięci RAM.<br>
+<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Ustawienia grafiki </span></span><br>
+<img src="https://strefa-omsi.pl/attachment.php?aid=2978" border="0" alt="[Obrazek: attachment.php?aid=2978]" original-title=""><br>
+<ul>
+<li><span style="font-weight: bold;">Docelowa liczba klatek</span><br>
+</li></ul>
+　Ogranicza maksymalną liczbę klatek na sekundę<br>
+<ul>
+<li><span style="font-weight: bold;">Liczba sąsiednich bloków</span><br>
+</li></ul>
+　Ilość kafli w każdym kierunku. 1 oznacza, że załadowanych jest 9 kafli, a 2 oznacza, że wokół ciebie masz 25 kafli. Ta opcja ma dość duży wpływ na wydajność. Ciekawostką jest to, że Omsi ma dynamiczną redukcję liczby kafli. Więcej na ten temat w Grafice (zaawansowane).<br>
+<ul>
+<li><span style="font-weight: bold;">Maks. zakres widoczności</span><br>
+</li></ul>
+　Gdy odległość między tobą a obiektem jest większa niż wartość (w metrach), to nie zostanie pokazany obiekt. Zmniejszenie tej wartości może poprawić wydajność. Jeżeli wartość będzie zbyt niska, to możesz zobaczyć obiekt odradzający się przed tobą i przegapić znaki oraz światła drogowe.<br>
+<ul>
+<li><span style="font-weight: bold;">Min. rozmiar obiektu (% rozmiaru ekranu)</span><br>
+</li></ul>
+　Jeżeli obiekt jest mniejszy niż ta wartość, to nie zostanie wyświetlony. Ta opcja ma zapobiec renderowaniu zbyt małego obiektu. Nie mam dużego doświadczenia, jak duży ma to wpływ na wydajność.<br>
+<ul>
+<li><span style="font-weight: bold;">... dla odbić</span><br>
+</li></ul>
+　Jeżeli obiekt jest mniejszy niż ta wartość, to jego odbicia nie zostaną pokazane. Odbicia to przeważnie tylko niektóre tekstury, więc ta opcja nie powinna być bardzo ważna.<br>
+<ul>
+<li><span style="font-weight: bold;">Odbicia w czasie rzeczywistym</span><br>
+</li></ul>
+　<span style="font-style: italic;">Brak:</span> lusterka są wyłączone<br>
+<br>
+　<span style="font-style: italic;">Ekonomiczne:</span> W razie potrzeby lusterka są renderowane z mniejszą liczbą klatek na sekundę. Początkowo oznaczało to, że lusterka są renderowane jeden po drugim, więc przy 3 punktach lustrzanych każde z nich działałoby z prędkością 1/3 liczby klatek na sekundę, ale (tak myślę), że wersja 1.6 niewidoczne lustra i tak nie renderuje. Oznacza to, że możesz uzyskać lusterka, które zwykle nie zacinają się tak bardzo w tym ustawieniu<br>
+<br>
+　<span style="font-style: italic;">Pełne:</span> każde widoczne lustro jest renderowane z taką samą liczbą klatek na sekundę jak w grze. Nie polecam tego ustawienia, ponieważ może znacznie zmniejszyć wydajność.<br>
+<ul>
+<li><span style="font-weight: bold;">Systemy cząsteczek</span><br>
+</li></ul>
+　Po moim doświadczeniu nie mają dużego wpływu na wykonanie, ale dodają kilka fajnych szczegółów. Układy cząsteczkowe to spaliny z samochodów, autobusów i kominów, tak samo jak woda rozbryzgowa na mokrych pasach. Powinieneś zmienić te ustawienia tylko jeśli inne ustawienia nie pomogły wystarczająco. W takim przypadku należy zacząć od zmniejszenia „Maks. Cząstki na emitera”. <br>
+<ul>
+<li><span style="font-weight: bold;">Maks. złożoność obiektów</span><br>
+</li></ul>
+　Oznacza, ile szczegółów jest pokazanych na mapie. Może mieć ograniczoną funkcjonalność z zawartością freeware (ponieważ priorytet obiektu ustawia twórca obiektu). Ta opcja może pomóc zwiększyć wydajność lub kiedy otrzymujesz białe tekstury.<br>
+<ul>
+<li><span style="font-weight: bold;">Maks. złożoność mapy</span><br>
+</li></ul>
+　Oznacza, jak daleko od głównego obszaru są pokazywane obiekty. Ponieważ priorytety są ustalane w edytorze map przez twórcę, może ono również mieć ograniczoną funkcjonalność. Zmniejszenie tego ustawienia powinno poprawić nieco wydajność.<br>
+<ul>
+<li><span style="font-weight: bold;">Maks. złożoność mapy</span><br>
+</li></ul>
+　<span style="font-style: italic;">Cienie:</span> Zawsze dezaktywuj tę opcję. Kosztuje znacznie więcej wydajności niż poprawia grafikę. Cienie mogą zmniejszyć liczbę klatek na sekundę do jednej trzeciej, a nawet połowy.<br>
+<br>
+　<span style="font-style: italic;">Odbicia w deszczu:</span> oznacza mokre ulice. Dodaje całkiem sporo do grafiki, wyłącz ją tylko wtedy, gdy masz duży spadek liczby klatek na sekundę na mokrych ulicach.<br>
+<br>
+　 <span style="font-style: italic;">Widoczni ludzie w odbiciach deszczu:</span> nie mam doświadczenia z tą opcją, nigdy jej nie aktywowałem. Spróbuj sam.<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Grafika (zaawansowane) </span></span><br>
+<img src="https://strefa-omsi.pl/attachment.php?aid=2979" border="0" alt="[Obrazek: attachment.php?aid=2979]" original-title=""><br>
+<ul>
+<li><span style="font-weight: bold;">Tryb ekonomiczny</span><br>
+</li></ul>
+　Aktywny tylko wtedy, gdy odbicia w czasie rzeczywistym są ustawione na <span style="font-style: italic;">Pełne</span>. Ta opcja ustawia odbicia w czasie rzeczywistym na<span style="font-style: italic;"> ekonomiczne</span>, gdy liczba klatek na sekundę spadnie poniżej górnej wartości i ponownie ustawia się na <span style="font-style: italic;">Pełne</span>, gdy liczba klatek na sekundę przekroczy dolną wartość. Ustawienie obu wartości tak, aby były blisko siebie, może powodować duże wahania liczby klatek na sekundę, gdy OMSI oscyluje między obydwoma ustawieniami.<br>
+<ul>
+<li><span style="font-weight: bold;">Dynamiczna redukcja bloków</span><br>
+</li></ul>
+　To bardzo przydatna opcja. Automatycznie zmniejsza liczbę sąsiadujących kafelków, gdy FPS (liczba klatek na sekundę – przyp. tłum.) spada poniżej górnej wartości i zwiększa ją, gdy FPS przekracza dolną wartość. Dzięki temu możesz mieć dobrą liczbę klatek na sekundę w mieście i dobry zasięg wizualny na mapach wiejskich.<br>
+<ul>
+<li><span style="font-weight: bold;">Tekstury</span><br>
+</li></ul>
+　Dwie opcje mogą pomóc w przypadku starych sterowników graficznych z małą pamięcią VRAM  (pamięć karty graficznej – przyp. tłum.). Wadą jest to, że OMSI wygląda jak gra N64 / PlayStation 1 z deaktywowanymi tymi opcjami.<br>
+<ul>
+<li><span style="font-weight: bold;">Maksymalna pamięć tekstur dla tekstur o wysokiej rozdzielczości</span><br>
+</li></ul>
+　Maks. Tex. Mem. for high.res Tex load ("Maksymalna pamięć tekstur dla tekstur o wysokiej rozdzielczości": Mówi się, że powinieneś ustawić tę wartość tak, aby była nieco mniejsza niż ilość twojej pamięci VRAM (ale nie jestem pewien, czy to jest prawda, ponieważ OMSI zawsze całkowicie wypełnia moją pamięć VRAM).<br>
+<ul>
+<li><span style="font-weight: bold;">Rozmiary tekstur odbić w czasie rzeczywistym</span><br>
+</li></ul>
+　Rozmiar tekstury odbić w czasie rzeczywistym: oznacza rozdzielczość lusterek, np. 512 oznacza, że &ZeroWidthSpace;&ZeroWidthSpace;lustra mają rozdzielczość 512x512. Wartość między 256 a 512 jest w porządku, jeśli masz Wyświetlacz 4K niż prawdopodobnie 1024 jest lepszy. Nigdy nie ustawiaj tej wartości na wysoką (wyższą niż rozdzielczość ekranu), w przeciwnym razie lustra zepsują się i nie będą działać.<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Dzwięk </span></span><br>
+<img src="https://strefa-omsi.pl/attachment.php?aid=2981" border="0" alt="[Obrazek: attachment.php?aid=2981]" original-title=""><br>
+　Tutaj najważniejsze: <span style="font-weight: bold;">Maks. Liczba dźwięków</span><br>
+Zbyt mała wartość prowadzi do brakujących dźwięków, cichych pasażerów itp. Zbyt wysoka wartość może obniżyć wydajność, ponieważ dźwięki muszą być dekodowane przez procesor. <br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Ruch AI </span></span><br>
+<img src="https://strefa-omsi.pl/attachment.php?aid=2980" border="0" alt="[Obrazek: attachment.php?aid=2980]" original-title=""><ul>
+<li><span style="font-weight: bold;">Maks. liczba ruchu ulicznego: Niezaplanowane </span><br>
+</li></ul>
+　Określa, ile pojazdów (samochodów, ciężarówek ...) jeździ po mapie. Jest to jedno z najważniejszych ustawień, ponieważ pojazdy AI wymagają dużej mocy procesora. Aby uzyskać dobrą wydajność, utrzymuj niską wartość. Tutaj musisz znaleźć dobry kompromis między natężeniem ruchu wokół siebie a dobrą wydajnością.<br>
+<ul>
+<li><span style="font-weight: bold;">Współczynnik ruchu drogowego </span><br>
+</li></ul>
+　OMSI ma natężenie ruchu zależne od pory dnia, dzięki tej opcji możesz wpływać na natężenie ruchu. Niższa wartość prowadzi do lepszej wydajności, ale także do bardziej pustych ulic.<br>
+<ul>
+<li><span style="font-weight: bold;">Zaparkowane auta </span><br>
+</li></ul>
+　OMSI ma stałe miejsca parkingowe. Ta wartość określa, ile z nich jest używanych. Zaparkowane samochody nie zmniejszają wydajności tak, jak samochody jeżdżące, ale zwiększają liczbę obiektów, które należy renderować.<br>
+<ul>
+<li><span style="font-weight: bold;">Maksymalna liczba ludzi </span><br>
+</li></ul>
+　Określa liczbę ludzi na mapie. Ogranicza również maks. Ilość pasażerów, jaką możesz mieć. Potrzebują również dużej mocy procesora (nie tak dużo jak pojazdy, ale wciąż dość dużo). Aby uzyskać dobrą wydajność, nie ustawiaj tej wartości na wysoką.<br>
+<ul>
+<li><span style="font-weight: bold;">Pasażerowie na przystankach </span><br>
+</li></ul>
+　W zależności od pory dnia na autobus czeka mniej lub więcej pasażerów. Dzięki tej wartości możesz mieć na to wpływ.<br>
+<ul>
+<li><span style="font-weight: bold;">Planowe </span><br>
+</li></ul>
+　Ustawia liczbę autobusów, tramwajów, pociągów itp. Jeżdżących po mapie. Aby uzyskać dobrą wydajność, utrzymuj tę wartość na niskim poziomie, wynoszącym 10 lub mniej.<ul>
+<li><span style="font-weight: bold;">Priorytet rozkładu </span><br>
+</li></ul>
+　Różne linie autobusowe mają różne priorytety. Podczas gdy główne linie autobusowe mają bardzo wysoki priorytet, inne linie wyłącznie AI są mniej ważne. Jeśli ustawisz to niżej, zobaczysz coraz mniej innych autobusów, tramwajów, pociągów itp. Aby uzyskać dobrą różnorodność, utrzymuj tę wartość na 4 i zmniejsz <span style="font-style: italic;">„Maksymalny ruch drogowy. Planowe  ”.</span><br>
+<ul>
+<li><span style="font-weight: bold;">Użyj zredukowanej listy AI<br>
+</span></li></ul>
+　Nie jestem pewien, czy ta opcja naprawdę ma jakąkolwiek zaletę. Spróbuj sam ...<br>
+<br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Jak poprawić wydajność (podsumowanie najważniejszych rzeczy) </span></span><br>
+<br>
+<ul>
+<li>Zmniejsz liczbę sąsiadujących płytek (1-2)</li>
+<li>Wyłącz cienie</li>
+<li>Ustaw maksymalny ruch drogowy Licznik: nieplanowany poniżej 100</li>
+<li>Ustaw maksymalny ruch drogowy Licznik: zaplanowany poniżej 10</li>
+<li>Ustaw  Maks. liczbę ludzi poniżej 150</li>
+<li>Zmniejsz współczynnik ruchu drogowego</li>
+<li>Ustaw maks. Liczba dźwięków od 250 do 400</li>
+<li>Zmniejsz maksymalną złożoność obiektów i map</li>
+<li>Zmniejsz maks. Obj. Widoczność Odległość<br>
+</li></ul>
+　Następnie wypróbuj inne ustawienia. Znalezienie najlepszego ustawienia zajmuje trochę czasu. Ponieważ każdy komputer jest nieco inny, nie ma ogólnego rozwiązania. <br>
+<br>
+<span style="font-size: medium;"><span style="font-weight: bold;">Uwagi końcowe</span></span><br>
+<br>
+Mam nadzieję, że ten przewodnik pomoże ci znaleźć najlepsze ustawienia dla twojego komputera. Muszę przyznać, że nie mam doświadczenia ze wszystkimi ustawieniami, ale myślę, że omówiłem najważniejsze rzeczy.<br>
+<br>
+<br>
+Wszystkie oświadczenia bez gwarancji. Baw się dobrze z OMSI!<br>
+┌──────────────────┐<br>
+│Licencja: CC0 1.0 Universal  │<br>
+└──────────────────┘
+			</div>
