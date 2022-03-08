@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script>
+var data = new Array();
+async function dataread(url) {
+	await fetch(url).then(function (response) {
+		return response.text();
+	}).then(function (html) {
+		// This is the HTML from our response as a text string
+		// console.log(html);
+		i=0;
+		while (1) {
+			var pos = html.search(RegExp(".*:"));
+			var pose = html.indexOf("|");
+			if (pos == -1) break;
+			data[i] = html.substring(pos,pose);
+			html = html.substring(pose+1);
+			// console.log(data1[i]);
+			i++;
+		}	
+	})
+}
+
+async function dataparse(IP,id) {
+	await dataread('http://'+IP);
+	let table1="";
+	let temp="";
+	let tempodcz="";
+	let wilg="";
+	let stat="";
+	var i=0;
+	for (i = 0; i < data.length; i++) {
+		if (data[i].charAt(0) == "T") {
+			temp = data[i].substring(2);
+		}
+		if (data[i].charAt(0) == "O") {
+			tempodcz = data[i].substring(2);
+		}
+		if (data[i].charAt(0) == "H") {
+			wilg = data[i].substring(2);
+		}
+		if (data[i].charAt(0) == "C") {
+			stat = data[i].substring(2);
+		}
+	}
+	table1 += "<center><b>Czujnik "+id+"</b></center><b>Temperatura:</b><br>"+temp+"°C<br><b>Wilgotność:</b><br>"+wilg+"%<br><b>Temp. odczuwalna:</b><br>"+tempodcz+"°C<br>"+stat;
+	document.getElementById(id).innerHTML = table1;
+}
+
+window.onload = setInterval(async function(){
+	await dataparse("miau2020.ovh:1901","1");
+}, 1000);
+</script>
+</head>
+<body>
+<style> td { border: 1px solid black; font-size: 30px; } </style>
+<table style="width:100%">
+	<tr>
+		<td id="1"></td> <td id="2"></td>
+	</tr>
+	<tr>
+		<td id="3"></td> <td id="4"></td>
+	</tr>
+	<tr>
+		<td id="5"></td> <td id="6"></td>
+	</tr>
+</body>
+</html>
