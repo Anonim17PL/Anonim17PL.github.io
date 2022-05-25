@@ -1,0 +1,45 @@
+<htmL>
+  <body>
+    Hej, to (znowu) ja!  :)<br/>
+<br/>
+    Dziś opiszę kilka małych pobocznych projektów które wymyśliłem.<br/>
+    Zacznę od najnowszego:<br/>
+<br/>
+    <b style="font-size: 20px">RJ via SMS</b>
+<br/>
+    Projekt został stworzony z nudów, wykorzystując potencjał routera przemysłowego RUT240 od Teltonika.<br/>
+    Pierwotnie router miał mi służyć jedynie jako router LTE.<br/>
+    <a href="https://img.td2.info.pl:8448/image/TjQC3"><img src="https://img.td2.info.pl:8448/images/2022/05/25/xU5gcNBm.jpg" /></a><br/>
+<br/>
+    Router jest wyposażony w system RutOS (opartym na OpenWRT), który można modyfikować poprzez instalację programów za pomocą opkg (podobnie jak apt-get).<br/>
+    Po instalacji Apache i PHP mamy możliwość postawienia serwera który łącząc się z API TD2 może pobierać rożne informacje.<br/>
+    Załączenie bramki SMS w panelu routera pozwala na wysyłanie wiadomości.<br/>
+    Ze względu na ograniczony rozmiar SMSa, informacja zwrotna zawiera jedynie nazwę stacji i godziny przyjazdu oraz odjazdu.<br/>
+    <a href="https://img.td2.info.pl:8448/image/TjfQP"><img src="https://img.td2.info.pl:8448/images/2022/05/25/b34ad8Pm.jpg" /></a><br/>
+    <a href="https://img.td2.info.pl:8448/image/TjO1f"><img src="https://img.td2.info.pl:8448/images/2022/05/25/jGQX63Am.jpg" /></a><br/>
+
+    Aby skorzystać z RJ via SMS należy wysłać SMS na numer 505252893 o treści [i]Poc numer_pociągu[/i] gdzie [i]numer_pociągu[/i] to numer pociągu aktywnego w SWDR (można sprawdzić na liście aktywnych pociągów).<br/>
+    Opłata zgodnie z taryfą operatora.<br/>
+<br/>
+    Gwarantowana poprawność rozkładu do dziesięciu stacji/przystanków. (udało mi się bezbłędnie wygenerować SMS z 13 miejscami postoju)<br/>
+<br/>
+    <a href="https://github.com/Anonim17PL/TD2-API-SMS">Kod źródłowy</a><br/>
+    <b>Usługa działa do 31 maja.</b><br/>
+<br/>
+    <b style="font-size: 20px">StacjoWAP</b><br/>
+<br/>
+    Projekt starszy, zakładający obsługę w starych telefonach z przeglądarką WAP.
+    Jest odwzorowaniem strony z aktywnymi pociągami i sceneriami, a także pozwala na przeglądanie rozkładu jazdy w formacie podobnym do RJ via SMS.<br/>
+    Testowany na emulatorach przeglądarek WAP, niestety nie udało mi się przetestować na starej Nokii 3510 (błędy połączenia z WAP poprzez GPRS i CSD).<br/>
+    Powinno działać na nowszych telefonach z obsługą hybrydową WAP i Internetu (np. Nokia 6300).<br/>
+    Działa na serwerze OVH.<br/>
+<br/>
+    <a href="https://img.td2.info.pl:8448/image/TjATZ"><img src="https://img.td2.info.pl:8448/images/2022/05/25/Bf0lABmm.jpg" /></a><br/>
+    <a href="https://img.td2.info.pl:8448/image/TjIce"><img src="https://img.td2.info.pl:8448/images/2022/05/25/DworC3Cm.jpg" /></a><br/>
+<br/>
+    Adres: <b>wap.miau2020.ovh</b><br/>
+<br/>
+    No i to wszystko co mam do zaoferowania na ten czas.<br/>
+    Czekam na komentarze. :)<br/>
+  </body>
+</html>
