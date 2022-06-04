@@ -1,83 +1,87 @@
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="Description" CONTENT="Strona odczytów pomiarów temperatury w mieszkaniu Anonima">
-<meta property="og:title" content="Termometry Anonima" />
+<meta http-equiv="Content-Language" content="pl">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="Description" CONTENT="How to repair OMSI simulator files without using &quot;Verify Integrity of Game 
+Files&quot;?">
+<meta property="og:title" content="Tutorial no. 1" />
 <meta property="og:description" content="Strona odczytów pomiarów temperatury w mieszkaniu Anonima" />
 <meta name="theme-color" content="#FF0000">
-<title>Termometry Anonima</title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XP6XSJN3F7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XP6XSJN3F7');
-</script>
-<script>
-var data = new Array();
-async function dataread(url) {
-	await fetch(url).then(function (response) {
-		return response.text();
-	}).then(function (html) {
-		// This is the HTML from our response as a text string
-		// console.log(html);
-		i=0;
-		while (1) {
-			var pos = html.search(RegExp(".*:"));
-			var pose = html.indexOf("|");
-			if (pos == -1) break;
-			data[i] = html.substring(pos,pose);
-			html = html.substring(pose+1);
-			// console.log(data1[i]);
-			i++;
-		}	
-	})
-}
-
-async function dataparse(IP,id) {
-	await dataread('http://'+IP);
-	let table1="";
-	let temp="";
-	let tempodcz="";
-	let wilg="";
-	let stat="";
-	var i=0;
-	for (i = 0; i < data.length; i++) {
-		if (data[i].charAt(0) == "T") {
-			temp = data[i].substring(2);
-		}
-		if (data[i].charAt(0) == "O") {
-			tempodcz = data[i].substring(2);
-		}
-		if (data[i].charAt(0) == "H") {
-			wilg = data[i].substring(2);
-		}
-		if (data[i].charAt(0) == "C") {
-			stat = data[i].substring(2);
-		}
-	}
-	table1 += "<center><b>Czujnik "+id+"</b></center><b>Temperatura:</b><br>"+temp+"°C<br><b>Wilgotność:</b><br>"+wilg+"%<br><b>Temp. odczuwalna:</b><br>"+tempodcz+"°C<br>"+stat;
-	document.getElementById(id).innerHTML = table1;
-}
-
-window.onload = setInterval(async function(){
-	await dataparse("miau2020.ovh:1901","1");
-}, 1000);
-</script>
+<title>How to repair OMSI simulator fil</title>
 </head>
+
 <body>
-<style> td { border: 1px solid black; font-size: 30px; } </style>
-<table style="width:100%">
-	<tr>
-		<td id="1"></td> <td id="2"></td>
-	</tr>
-	<tr>
-		<td id="3"></td> <td id="4"></td>
-	</tr>
-	<tr>
-		<td id="5"></td> <td id="6"></td>
-	</tr>
+
+<p><b></b>How to repair OMSI simulator files without using &quot;Verify Integrity of Game 
+Files&quot;?</b><br>
+<br>
+You can use SteamCMD to repair files without integrity checking.</p>
+<ol style="font-weight: bold">
+	<li>Downloading SteamCMD<br>
+	<span style="font-weight: 400">To download SteamCMD visit the official 
+	website:
+	<a href="https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip">
+	https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip</a> (for 
+	Windows only)<br>
+&nbsp;</span></li>
+	<li>Downloading game files using SteamCMD<br>
+	<span style="font-weight: 400">To download the simulator files you need:<br>
+	- appid of the game (for OMSI 2 it is 252530).<br>
+	- your login.<br>
+	- your password.<br>
+	- Your Steam Guard Code (optional).<br>
+	<br>
+	Open a command prompt in the SteamCMD folder and type:<br>
+	<font color="#000080">steamcmd +login <i>your_login</i> +app_update <i>appid</i> 
+	+quit</font><br>
+	<br>
+	After logging in, the download will start.<br>
+	</span><font color="#FF0000">Attention!</font><span style="font-weight: 400"><font color="#FF0000"> 
+	If this is your first time starting SteamCMD, the client update will begin 
+	and you will be prompted for your Steam Guard Code.</font><br>
+&nbsp;</span></li>
+	<li>Downloading add-on files using SteamCMD<br>
+	<span style="font-weight: 400">To download the simulator files you need:<br>
+	- appid of the game (for OMSI 2 it is 252530).<br>
+	- depotid of the add-on.<br>
+	- your login.<br>
+	- your password.<br>
+	- Your Steam Guard Code (optional).<br>
+	<br>
+	Depotid of the add-on can be found in the address bar of your browser.<br>
+	Open the Steam store page, find your add-on and write down the specific 
+	number.<br>
+	<br>
+	<img border="0" src="info.jpg" width="787" height="303"><br>
+	<br>
+	Open a command prompt in the SteamCMD folder and type:<br>
+	<font color="#000080">steamcmd +login <i>your_login</i> +download_depot<i> 
+	appid</i> <i>depotid</i> +quit</font><br>
+	<br>
+	After logging in, the download will start.<br>
+	</span><font color="#FF0000">Attention!</font><font color="#FF0000"><span style="font-weight: 400"> 
+	If this is your first time starting SteamCMD, the client update will begin 
+	and you will be prompted for your Steam Guard Code.<br>
+&nbsp;</span></font></li>
+	<li>Copying files<span style="font-weight: 400"><font color="#FF0000"><br>
+	</font>You can find the files to be copied in the <i>steamapps</i> folder<font color="#FF0000">.<br>
+&nbsp;</font></span></li>
+	<li>More information:<br>
+	<span style="font-weight: 400">
+	<a href="https://developer.valvesoftware.com/wiki/SteamCMD">
+	https://developer.valvesoftware.com/wiki/SteamCMD</a></span><br>
+	<span style="font-weight: 400">
+	<a href="https://developer.valvesoftware.com/wiki/Command_Line_Options#SteamCMD">
+	https://developer.valvesoftware.com/wiki/Command_Line_Options#SteamCMD</a></span><br>
+	<br>
+	If you get an error:<br>
+	<span style="font-weight: 400">&nbsp;&nbsp;&nbsp; Error! App 'xxx' state is 
+	0x212 after update job.</span><br>
+	This means that you do not have enough disk space.<br>
+&nbsp;</li>
+</ol>
+
 </body>
+
 </html>
