@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+$breakpointMd: 960px;
+$breakpointSm: 550px;
+
+$bgColor: #2b3552;
+$textColor: #fff;
+$secondaryColor: #222;
+$accentColor: #e4c428;
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+
+  &-track {
+    background: #222;
+    border-radius: 0.5rem;
+  }
+
+  &-thumb {
+    border-radius: 1rem;
+    background: #777;
+  }
+
+  &-corner {
+    background: #222;
+  }
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Lato', sans-serif;
+
+  background-color: $bgColor;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+}
+
+select,
+option,
+input,
+button {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+
+  padding: 0;
+  margin: 0;
+
+  cursor: pointer;
+
+  font-size: 1em;
+  color: white;
+
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.btn {
+  padding: 0.4em 0.75em;
+
+  outline: none;
+  background-color: #222;
+  border-radius: 8px;
+  font-weight: bold;
+
+  transition: all 250ms;
+
+  &.btn--outline {
+    background: none;
+    font-weight: bold;
+    outline: 1px solid $accentColor;
+  }
+
+  &:focus-visible {
+    color: $accentColor;
+    outline: 1px solid white;
+  }
+
+  &[data-disabled='true'] {
+    user-select: none;
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+    opacity: 0.75;
+    background-color: #2b2b2b;
+  }
+
+  &--text {
+    font-weight: bold;
+    transition: all 250ms;
+    background: none;
+    padding: 0;
+
+    &:focus-visible {
+      outline: 1px solid white;
+    }
+  }
+}
+
+select,
+input {
+  background: none;
+  border: 2px solid white;
+  outline: none;
+
+  padding: 0.25em 0.35em;
+
+  color: white;
+  font-size: 1em;
+
+  width: 18em;
+
+  &:focus-visible {
+    border-color: $accentColor;
+  }
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+option {
+  color: black;
+  border: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  &--accent {
+    color: $accentColor;
+  }
+
+  &--grayed {
+    color: #aaa;
+  }
+}
+
+.g-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 200;
+
+  &_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #000000aa;
+    z-index: 10;
+  }
+}
+
+.g-choice {
+  input {
+    display: none;
+  }
+
+  span {
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    border: 2px solid white;
+    margin: 0.25em;
+    cursor: pointer;
+
+    transition: all 100ms ease;
+  }
+
+  span:focus {
+    color: $accentColor;
+    outline: none;
+  }
+
+  label > input:checked + span {
+    color: $accentColor;
+    border-color: $accentColor;
+  }
+}
+
+// Vue Transition anims
+.slide-top {
+  &-enter-from,
+  &-leave-to {
+    transform: translateY(-100%);
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: transform 100ms ease-in-out;
+  }
+}
+
+.card-appear {
+  &-enter-from,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all 100ms ease-in-out;
+  }
+}
